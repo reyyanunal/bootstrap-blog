@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Benim Blog'um</title>
+    <title>Kitap & Edebiyat Bloğu</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top py-2" style="background-color: #1a2a40;">
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top py-2" style="background-color: #174888;">
         <div class="container">
 
             <!-- 1. SOL: Logo ve Kalem İkonu -->
             <a class="navbar-brand font-weight-bold d-flex align-items-center" href="index.html">
-                <i class="fas fa-pen-nib mr-3"></i> Reyyan'ın Bloğu
+                <i class="fas fa-book-open mr-2"></i> Satır Arası
             </a>
 
             <!-- MOBİL HAMBURGER BUTONU -->
@@ -30,7 +30,8 @@
                 <!-- ORTA: Birleşik ve Simetrik Arama Çubuğu (Asla kopmaz/yamulmaz) -->
                 <form class="form-inline mx-auto my-3 my-lg-0">
                     <div class="input-group">
-                        <input type="search" class="form-control form-control-sm border-0" placeholder="Blogda ara..."
+                        <input type="search" class="form-control form-control-sm border-0"
+                            placeholder="Kitap veya yazar ara..."
                             style="width: 220px; background-color: #243750; color: #fff;">
                         <div class="input-group-append">
                             <button class="btn btn-sm btn-secondary border-0" type="submit">
@@ -60,6 +61,165 @@
 
         </div>
     </nav>
+
+    <!-- KARŞILAMA (HERO) ALANI - KİBAR & DENGELİ -->
+    <!-- KARŞILAMA (HERO) ALANI: EDEBİYAT & KİTAP ELEŞTİRİSİ -->
+    <section class="py-4 bg-white text-center border-bottom shadow-sm">
+        <div class="container">
+            <h2 class="font-weight-bold text-dark mb-2">Satır Arası: Kitap Eleştirileri ve Edebiyat Notları</h2>
+            <p class="text-muted mx-auto mb-0" style="max-width: 700px; font-size: 15px;">
+                Klasik yapıtlardan güncel polisiye ve edebiyat haberlerine; derinlemesine tahliller, okuma rehberleri ve
+                kitap dünyasından notlar.
+            </p>
+        </div>
+    </section>
+    <!-- ANA İÇERİK ALANI (GRID) -->
+    <main class="container my-5">
+        <div class="row">
+
+            <!-- 1. SOL ALAN: BLOG YAZILARI (8 Sütun) -->
+            <!-- 1. SOL ALAN: BLOG YAZILARI (8 Sütun) -->
+            <div class="col-lg-7">
+                <!-- Bölüm Başlığı -->
+                <h4 class="font-weight-bold text-dark mb-4 border-bottom pb-2">
+                    <i class="fas fa-feather-alt mr-2 text-muted"></i>Son İncelemeler
+                </h4>
+
+                <!-- SHERLOCK HOLMES KİTAP İNCELEME KARTI -->
+                <article class="card mb-4 border-0 shadow-sm">
+                    <!-- Kapak Görseli (Eski kitaplar / Viktorya dönemi hissi) -->
+                    <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80"
+                        class="card-img-top" alt="Klasik kitaplar ve çalışma masası"
+                        style="object-fit: cover; max-height: 280px;">
+
+                    <div class="card-body p-4">
+                        <!-- Kategori Rozeti ve Okuma Bilgisi -->
+                        <div class="d-flex align-items-center mb-2">
+                            <span class="badge badge-dark px-2 py-1 mr-2" style="background-color: #1a2a40;">Polisiye &
+                                Klasik</span>
+                            <small class="text-muted">
+                                <i class="far fa-calendar-alt mr-1"></i> 10 Ekim 2026 &middot;
+                                <i class="far fa-clock ml-2 mr-1"></i> 6 dk inceleme
+                            </small>
+                        </div>
+
+                        <!-- Kitap Başlığı -->
+                        <h3 class="card-title font-weight-bold">
+                            <a href="detay.html" class="text-dark text-decoration-none">
+                                Kızıl Dosya: Sherlock Holmes Efsanesinin Doğuşu ve Akıl Yürütme Sanatı
+                            </a>
+                        </h3>
+
+                        <!-- İnceleme Özeti -->
+                        <p class="card-text text-muted">
+                            Sir Arthur Conan Doyle’un 1887 tarihli ilk romanı <em>Kızıl Dosya</em>, Dr. Watson ile
+                            Holmes’un 221B Baker Sokağı’nda kesişen yollarını ve mantıksal tümdengelim yönteminin
+                            polisiye edebiyatı nasıl kökten değiştirdiğini gözler önüne seriyor.
+                        </p>
+
+                        <!-- Buton -->
+                        <a href="detay.html" class="btn btn-sm btn-outline-dark px-3 font-weight-bold">
+                            İncelemeyi Oku <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </article>
+                <!-- 2. BLOG KARTI: DÜNYA KLASİKLERİ -->
+                <article class="card mb-4 border-0 shadow-sm">
+                    <!-- Kapak Görseli -->
+                    <img src="https://images.unsplash.com/photo-1476275466078-4007374efbbe?auto=format&fit=crop&w=800&q=80"
+                        class="card-img-top" alt="Eski Kütüphane Kitaplığı"
+                        style="object-fit: cover; max-height: 280px;">
+
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-2">
+                            <span class="badge badge-secondary px-2 py-1 mr-2" style="background-color: #3f51b5;">Dünya
+                                Klasikleri</span>
+                            <small class="text-muted">
+                                <i class="far fa-calendar-alt mr-1"></i> 05 Ekim 2026 &middot;
+                                <i class="far fa-clock ml-2 mr-1"></i> 4 dk okuma
+                            </small>
+                        </div>
+
+                        <h3 class="card-title font-weight-bold">
+                            <a href="detay.html" class="text-dark text-decoration-none">
+                                Bilinmeyen Bir Kadının Mektubu: Stefan Zweig ve Tutkunun Anatomisi
+                            </a>
+                        </h3>
+
+                        <p class="card-text text-muted">
+                            Zweig’ın insan psikolojisinin en kırılgan köşelerine dokunduğu bu unutulmaz novellada, tek
+                            taraflı bir saplantının ve karşılıksız adanmışlığın edebi izlerini sürüyoruz.
+                        </p>
+
+                        <a href="detay.html" class="btn btn-sm btn-outline-dark px-3 font-weight-bold">
+                            İncelemeyi Oku <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- 2. SAĞ ALAN: SIDEBAR / KENAR ÇUBUĞU (4 Sütun) -->
+            <!-- 2. SAĞ ALAN: SIDEBAR / KENAR ÇUBUĞU (Tek ve Düzgün 4 Sütun) -->
+            <div class="col-lg-5">
+
+                <!-- 1. KUTU: EDİTÖR / KİTAP BÜLTENİ KARTI -->
+                <aside class="card mb-4 border-0 shadow-sm text-center p-3">
+                    <div class="card-body">
+                        <!-- Kitap Temalı Profil Görseli -->
+                        <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=300&q=80"
+                            alt="Kitap ve Kahve" class="rounded-circle mb-3 shadow-sm"
+                            style="width: 90px; height: 90px; object-fit: cover;">
+
+                        <h5 class="card-title font-weight-bold mb-1">Editör Masası</h5>
+                        <p class="text-muted small mb-2">Bağımsız Kitap İncelemeleri</p>
+                        <p class="card-text text-secondary small">
+                            Dünya klasiklerinden polisiye romanlara, edebiyat dünyasından güncel haberler ve eleştiriler
+                            bu köşede bir araya geliyor.
+                        </p>
+
+                        <!-- Edebi İkonlar -->
+                        <div class="d-flex justify-content-center mt-3">
+                            <a href="#" class="text-secondary mx-2"><i class="fas fa-bookmark fa-lg"></i></a>
+                            <a href="#" class="text-secondary mx-2"><i class="fas fa-feather-alt fa-lg"></i></a>
+                            <a href="#" class="text-secondary mx-2"><i class="fas fa-glasses fa-lg"></i></a>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- 2. KUTU: EDEBİYAT KATEGORİLERİ -->
+                <aside class="card mb-4 border-0 shadow-sm">
+                    <div class="card-header bg-white font-weight-bold border-0 pt-3">
+                        <i class="fas fa-tags mr-2 text-muted"></i>Kategoriler
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li
+                            class="list-group-item d-flex justify-content-between align-items-center border-0 px-3 py-2">
+                            <a href="#" class="text-dark text-decoration-none small">Polisiye & Gizem</a>
+                            <span class="badge badge-light badge-pill text-muted">12</span>
+                        </li>
+                        <li
+                            class="list-group-item d-flex justify-content-between align-items-center border-0 px-3 py-2">
+                            <a href="#" class="text-dark text-decoration-none small">Dünya Klasikleri</a>
+                            <span class="badge badge-light badge-pill text-muted">18</span>
+                        </li>
+                        <li
+                            class="list-group-item d-flex justify-content-between align-items-center border-0 px-3 py-2">
+                            <a href="#" class="text-dark text-decoration-none small">Yeni Çıkanlar & İncelemeler</a>
+                            <span class="badge badge-light badge-pill text-muted">7</span>
+                        </li>
+                        <li
+                            class="list-group-item d-flex justify-content-between align-items-center border-0 px-3 py-2">
+                            <a href="#" class="text-dark text-decoration-none small">Edebiyat Haberleri</a>
+                            <span class="badge badge-light badge-pill text-muted">4</span>
+                        </li>
+                    </ul>
+                </aside>
+
+            </div>
+        </div>
+
+        </div>
+    </main>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
