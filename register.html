@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kayıt Ol | Satır Arası</title>
+  
+  <style>
+    /* Tarayıcının (özellikle Edge'in) otomatik eklediği şifre göz ikonunu gizler */
+    input[type="password"]::-ms-reveal,
+    input[type="password"]::-ms-clear {
+      display: none;
+    }
+  </style>
+
+  <!-- Bootstrap 4 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- EKRANI KAPLAYAN ANA TAŞIYICI -->
+  <div class="container-fluid vh-100">
+    <div class="row vh-100">
+      
+      <!-- 1. SOL YARI: GÖRSEL ALANI (Farklı Bir Görsel) -->
+      <div class="col-md-5 d-none d-md-block" 
+           style="background-image: url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1000&q=80'); 
+                  background-size: cover; 
+                  background-position: center;">
+      </div>
+
+      <!-- 2. SAĞ YARI: KAYIT FORMU ALANI (col-md-7 yaparak formu biraz daha genişlettik) -->
+      <div class="col-md-7 bg-white d-flex align-items-center justify-content-center">
+        <!-- Form içeriği max-width: 450px ile sınırlı -->
+        <div style="width: 85%; max-width: 450px;">
+          
+          <!-- Üst Başlık ve Logo -->
+          <div class="text-center mb-4">
+            <a href="index.html" class="text-dark text-decoration-none">
+              <i class="fas fa-feather-alt fa-3x mb-3" style="color: #1a2a40;"></i>
+              <h2 class="font-weight-bold">Satır Arası'na Katıl</h2>
+            </a>
+            <p class="text-muted">Kendi edebiyat köşeni oluşturmaya başla.</p>
+          </div>
+          
+          <!-- KAYIT FORMU -->
+          <form action="index.html">
+            
+            <!-- Ad Soyad -->
+            <div class="form-group mb-3">
+              <label for="fullName" class="font-weight-bold small text-muted">AD SOYAD</label>
+              <input type="text" class="form-control form-control-lg bg-light border-0" id="fullName" placeholder="Örn: Ahmet Yılmaz" required>
+            </div>
+
+            <!-- E-Posta -->
+            <div class="form-group mb-3">
+              <label for="email" class="font-weight-bold small text-muted">E-POSTA ADRESİ</label>
+              <input type="email" class="form-control form-control-lg bg-light border-0" id="email" placeholder="ornek@mail.com" required>
+            </div>
+            
+            <!-- Şifre -->
+            <div class="form-group mb-3">
+              <label for="password" class="font-weight-bold small text-muted">ŞİFRE</label>
+              <div class="input-group">
+                <input type="password" class="form-control form-control-lg bg-light border-0" id="password" placeholder="En az 8 karakter" required>
+                <div class="input-group-append">
+                  <button class="btn btn-light bg-light border-0 text-secondary" type="button" id="togglePassword">
+                    <i class="fas fa-eye-slash" id="eyeIcon"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Şifre Tekrar (İkinci Göz İkonu) -->
+            <div class="form-group mb-4">
+              <label for="passwordConfirm" class="font-weight-bold small text-muted">ŞİFRE TEKRAR</label>
+              <div class="input-group">
+                <input type="password" class="form-control form-control-lg bg-light border-0" id="passwordConfirm" placeholder="Şifrenizi doğrulayın" required>
+                <div class="input-group-append">
+                  <button class="btn btn-light bg-light border-0 text-secondary" type="button" id="togglePasswordConfirm">
+                    <i class="fas fa-eye-slash" id="eyeIconConfirm"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Kullanıcı Sözleşmesi -->
+            <div class="custom-control custom-checkbox mb-4">
+              <input type="checkbox" class="custom-control-input" id="terms" required>
+              <label class="custom-control-label text-muted small" for="terms">
+                <a href="#" class="text-dark font-weight-bold">Kullanım Koşulları</a>'nı ve <a href="#" class="text-dark font-weight-bold">Gizlilik Politikası</a>'nı okudum, kabul ediyorum.
+              </label>
+            </div>
+            
+            <!-- Kayıt Butonu -->
+            <button type="submit" class="btn btn-dark btn-lg btn-block font-weight-bold" style="background-color: #1a2a40;">
+              Hesap Oluştur
+            </button>
+            
+          </form>
+          
+          <!-- Alt Yönlendirme -->
+          <div class="text-center mt-4">
+            <p class="text-muted small">
+              Zaten bir hesabın var mı? <a href="login.html" class="text-dark font-weight-bold">Giriş Yap</a>
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT: ŞİFRE GÖSTER / GİZLE (İki Kutu İçin Ayrı Ayrı) -->
+  <script>
+    // Birinci Şifre Kutusu İçin
+    const togglePasswordBtn = document.getElementById('togglePassword');
+    const passwordInput = document.getElementById('password');
+    const eyeIcon = document.getElementById('eyeIcon');
+
+    togglePasswordBtn.addEventListener('click', function () {
+      const isPassword = passwordInput.getAttribute('type') === 'password';
+      if (isPassword) {
+        passwordInput.setAttribute('type', 'text');
+        eyeIcon.classList.remove('fa-eye-slash');
+        eyeIcon.classList.add('fa-eye');
+      } else {
+        passwordInput.setAttribute('type', 'password');
+        eyeIcon.classList.remove('fa-eye');
+        eyeIcon.classList.add('fa-eye-slash');
+      }
+    });
+
+    // İkinci (Doğrulama) Şifre Kutusu İçin
+    const togglePasswordConfirmBtn = document.getElementById('togglePasswordConfirm');
+    const passwordConfirmInput = document.getElementById('passwordConfirm');
+    const eyeIconConfirm = document.getElementById('eyeIconConfirm');
+
+    togglePasswordConfirmBtn.addEventListener('click', function () {
+      const isPasswordConfirm = passwordConfirmInput.getAttribute('type') === 'password';
+      if (isPasswordConfirm) {
+        passwordConfirmInput.setAttribute('type', 'text');
+        eyeIconConfirm.classList.remove('fa-eye-slash');
+        eyeIconConfirm.classList.add('fa-eye');
+      } else {
+        passwordConfirmInput.setAttribute('type', 'password');
+        eyeIconConfirm.classList.remove('fa-eye');
+        eyeIconConfirm.classList.add('fa-eye-slash');
+      }
+    });
+  </script>
+
+</body>
+</html>
