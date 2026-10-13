@@ -5,87 +5,63 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kızıl Dosya İncelemesi | Satır Arası</title>
-  
-  <!-- Bootstrap 4 CSS -->
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
 <body class="bg-light">
-
-  <!-- 1. NAVBAR (Ana sayfa ile aynı) -->
   <nav class="navbar navbar-expand-lg navbar-dark sticky-top py-2" style="background-color: #174888;">
-        <div class="container">
-
-            <!-- 1. SOL: Logo ve Kalem İkonu -->
-            <a class="navbar-brand font-weight-bold d-flex align-items-center" href="index.html">
-                <i class="fas fa-book-open mr-2"></i> Satır Arası
-            </a>
-
-            <!-- MOBİL HAMBURGER BUTONU -->
-            <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#anaMenu">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <!-- 2. AÇILAN KISIM (Masaüstünde yan yana, mobilde tertemiz alt alta) -->
-            <div class="collapse navbar-collapse" id="anaMenu">
-
-                <!-- ORTA: Birleşik ve Simetrik Arama Çubuğu (Asla kopmaz/yamulmaz) -->
-                <form class="form-inline mx-auto my-3 my-lg-0">
-                    <div class="input-group">
-                        <input type="search" class="form-control form-control-sm border-0"
-                            placeholder="Kitap veya yazar ara..."
-                            style="width: 220px; background-color: #243750; color: #fff;">
-                        <div class="input-group-append">
-                            <button class="btn btn-sm btn-secondary border-0" type="submit">
-                                <i class="fas fa-search"></i>
-                            </button>
-                        </div>
-                    </div>
-                </form>
-
-                <!-- SAĞ: Menü Linkleri ve Butonlar (Dikeyde tam ortalı) -->
-                <ul class="navbar-nav ml-auto align-items-center">
-                    <li class="nav-item">
-                        <a class="nav-link px-3" href="index.html">Ana Sayfa</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link px-3" href="detay.html">Blog Detay</a>
-                    </li>
-                    <li class="nav-item my-2 my-lg-0 ml-lg-2">
-                        <a class="btn btn-outline-light btn-sm px-3" href="login.html">Giriş</a>
-                    </li>
-                    <li class="nav-item my-2 my-lg-0 ml-lg-2">
-                        <a class="btn btn-light btn-sm px-3 font-weight-bold" href="register.html">Kayıt</a>
-                    </li>
-                </ul>
-
+    <div class="container">
+      <a class="navbar-brand font-weight-bold d-flex align-items-center" href="index.html">
+        <i class="fas fa-book-open mr-2"></i> Satır Arası
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#anaMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="anaMenu">
+        <form class="form-inline mx-auto my-3 my-lg-0">
+          <div class="input-group">
+            <input type="search" class="form-control form-control-sm border-0" placeholder="Kitap veya yazar ara..."
+              style="width: 220px; background-color: #243750; color: #fff;">
+            <div class="input-group-append">
+              <button class="btn btn-sm btn-secondary border-0" type="submit">
+                <i class="fas fa-search"></i>
+              </button>
             </div>
+          </div>
+        </form>
+        <ul class="navbar-nav ml-auto align-items-center">
+          <li class="nav-item">
+            <a class="nav-link px-3" href="index.html">Ana Sayfa</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3" href="detay.html">Blog Detay</a>
+          </li>
+          <li class="nav-item my-2 my-lg-0 ml-lg-2">
+            <a class="btn btn-outline-light btn-sm px-3" href="login.html">Giriş</a>
+          </li>
+          <li class="nav-item my-2 my-lg-0 ml-lg-2">
+            <a class="btn btn-light btn-sm px-3 font-weight-bold" href="register.html">Kayıt</a>
+          </li>
+        </ul>
 
-        </div>
-    </nav>
+      </div>
 
-  <!-- 2. ANA İÇERİK ALANI (7-5 GRID DÜZENİ) -->
+    </div>
+  </nav>
+
   <main class="container my-5">
     <div class="row">
-
-      <!-- SOL SÜTUN: TAM MAKALE OKUMA ALANI (7 Sütun) -->
       <div class="col-lg-8 mb-4">
-        
-        <!-- Makale Kartı (Ana sayfadaki kart yapısıyla birebir aynı!) -->
-        <article class="card border-0 shadow-sm">
-          
-          <!-- Kapak Görseli: Kutuya sıfıra sıfır oturur (card-img-top) -->
-          <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80" 
-               class="card-img-top" 
-               alt="Klasik kitaplar ve çalışma masası" 
-               style="max-height: 450px; object-fit: cover;">
 
-          <!-- Makale Gövdesi (Tüm metinler bu boşluklu yapının içinde) -->
+        <article class="card border-0 shadow-sm">
+
+          <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80"
+            class="card-img-top" alt="Klasik kitaplar ve çalışma masası" style="max-height: 450px; object-fit: cover;">
+
           <div class="card-body p-4 p-md-5">
-            
-            <!-- Etiket ve Tarih (Ana sayfadaki gibi) -->
+
             <div class="d-flex align-items-center mb-3">
               <span class="badge badge-dark px-2 py-1 mr-2" style="background-color: #1a2a40;">Polisiye & Klasik</span>
               <small class="text-muted">
@@ -96,34 +72,43 @@
             </div>
 
             <!-- Ana Başlık -->
-            <h1 class="font-weight-bold mb-4" style="font-size: 2rem;">Kızıl Dosya: Sherlock Holmes Efsanesinin Doğuşu ve Akıl Yürütme Sanatı</h1>
+            <h1 class="font-weight-bold mb-4" style="font-size: 2rem;">Kızıl Dosya: Sherlock Holmes Efsanesinin Doğuşu
+              ve Akıl Yürütme Sanatı</h1>
 
             <!-- Paragraflar -->
             <div class="text-justify text-dark" style="font-size: 1.05rem; line-height: 1.8;">
               <p class="lead font-weight-bold text-muted">
-                Arthur Conan Doyle, 1887'de "Kızıl Dosya"yı (A Study in Scarlet) yayımladığında, edebiyat tarihinin en ikonik karakterlerinden birini yarattığının muhtemelen farkında değildi.
+                Arthur Conan Doyle, 1887'de "Kızıl Dosya"yı (A Study in Scarlet) yayımladığında, edebiyat tarihinin en
+                ikonik karakterlerinden birini yarattığının muhtemelen farkında değildi.
               </p>
               <p>
-                Bu ilk macera, savaş gazisi Dr. Watson'ın Londra'da kalacak yer ararken gizemli oda arkadaşı Sherlock Holmes ile tanışmasını konu alır. Mantık, gözlem ve tümdengelim sanatının kusursuz bir şekilde işlendiği bu eser, polisiye türünün kurallarını baştan yazmıştır.
+                Bu ilk macera, savaş gazisi Dr. Watson'ın Londra'da kalacak yer ararken gizemli oda arkadaşı Sherlock
+                Holmes ile tanışmasını konu alır. Mantık, gözlem ve tümdengelim sanatının kusursuz bir şekilde işlendiği
+                bu eser, polisiye türünün kurallarını baştan yazmıştır.
               </p>
-              
+
               <blockquote class="blockquote bg-light p-3 border-left border-dark mt-4 mb-4">
-                <p class="mb-0 font-italic">"İmkânsızı elediğinde elinde kalan ne kadar olası görünmese de gerçeğin ta kendisidir."</p>
+                <p class="mb-0 font-italic">"İmkânsızı elediğinde elinde kalan ne kadar olası görünmese de gerçeğin ta
+                  kendisidir."</p>
                 <footer class="blockquote-footer mt-1">Sherlock Holmes</footer>
               </blockquote>
-              
+
               <p>
-                Kitabın iki bölümlü yapısı bazı okurlar için şaşırtıcı olsa da, cinayetin arka planındaki derin intikam hikayesi okuyucuyu Viktorya dönemi Londra'sından Amerika'nın ıssız çöllerine götürür. Holmes'un olay yerindeki ayak izlerini ve sigara küllerini inceleyerek failin boyunu ve yaşını tahmin ettiği o meşhur sahne, akıl yürütme sanatının edebiyattaki en büyük şovlarından biridir.
+                Kitabın iki bölümlü yapısı bazı okurlar için şaşırtıcı olsa da, cinayetin arka planındaki derin intikam
+                hikayesi okuyucuyu Viktorya dönemi Londra'sından Amerika'nın ıssız çöllerine götürür. Holmes'un olay
+                yerindeki ayak izlerini ve sigara küllerini inceleyerek failin boyunu ve yaşını tahmin ettiği o meşhur
+                sahne, akıl yürütme sanatının edebiyattaki en büyük şovlarından biridir.
               </p>
             </div>
-            
+
             <hr class="my-5">
 
             <!-- YORUM FORMU -->
             <h4 class="font-weight-bold mb-3"><i class="far fa-comments mr-2"></i>Yorum Bırak</h4>
             <form>
               <div class="form-group">
-                <textarea class="form-control bg-light border-0" id="yorum" rows="4" placeholder="İnceleme hakkında ne düşünüyorsunuz? Düşüncelerinizi paylaşın..."></textarea>
+                <textarea class="form-control bg-light border-0" id="yorum" rows="4"
+                  placeholder="İnceleme hakkında ne düşünüyorsunuz? Düşüncelerinizi paylaşın..."></textarea>
               </div>
               <button type="submit" class="btn btn-dark px-4 font-weight-bold">Gönder</button>
             </form>
@@ -133,19 +118,18 @@
 
       </div>
 
-      <!-- SAĞ SÜTUN: SIDEBAR (5 Sütun - Ana Sayfa ile Birebir Aynı) -->
       <div class="col-lg-4">
-        
-        <!-- 1. KUTU: EDİTÖR / KİTAP BÜLTENİ KARTI -->
+
         <aside class="card mb-4 border-0 shadow-sm text-center p-3">
           <div class="card-body">
             <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=300&q=80"
-                 alt="Kitap ve Kahve" class="rounded-circle mb-3 shadow-sm"
-                 style="width: 90px; height: 90px; object-fit: cover;">
+              alt="Kitap ve Kahve" class="rounded-circle mb-3 shadow-sm"
+              style="width: 90px; height: 90px; object-fit: cover;">
             <h5 class="card-title font-weight-bold mb-1">Editör Masası</h5>
             <p class="text-muted small mb-2">Bağımsız Kitap İncelemeleri</p>
             <p class="card-text text-secondary small">
-              Dünya klasiklerinden polisiye romanlara, edebiyat dünyasından güncel haberler ve eleştiriler bu köşede bir araya geliyor.
+              Dünya klasiklerinden polisiye romanlara, edebiyat dünyasından güncel haberler ve eleştiriler bu köşede bir
+              araya geliyor.
             </p>
             <div class="d-flex justify-content-center mt-3">
               <a href="#" class="text-secondary mx-2"><i class="fas fa-bookmark fa-lg"></i></a>
@@ -154,8 +138,6 @@
             </div>
           </div>
         </aside>
-
-        <!-- 2. KUTU: EDEBİYAT KATEGORİLERİ -->
         <aside class="card mb-4 border-0 shadow-sm">
           <div class="card-header bg-white font-weight-bold border-0 pt-3">
             <i class="fas fa-tags mr-2 text-muted"></i>Kategoriler
@@ -188,4 +170,5 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
 </body>
+
 </html>
