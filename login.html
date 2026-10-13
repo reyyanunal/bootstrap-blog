@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş Yap | Satır Arası</title>
+    <style>
+        /* Tarayıcının (özellikle Edge'in) otomatik eklediği şifre göz ikonunu gizler */
+        input[type="password"]::-ms-reveal,
+        input[type="password"]::-ms-clear {
+            display: none;
+        }
+    </style>
+
+    <!-- Bootstrap 4 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- EKRANI KAPLAYAN ANA TAŞIYICI (vh-100 ile yüksekliği %100 yaptık) -->
+    <div class="container-fluid vh-100">
+        <div class="row vh-100">
+
+            <!-- 1. SOL YARI: GÖRSEL ALANI (Mobilde gizlenir d-none, PC'de d-md-block ile görünür) -->
+            <div class="col-md-6 d-none d-md-block" style="background-image: url('https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=1000&q=80'); 
+                  background-size: cover; 
+                  background-position: center;">
+            </div>
+
+            <!-- 2. SAĞ YARI: GİRİŞ FORMU ALANI -->
+            <div class="col-md-6 bg-white d-flex align-items-center justify-content-center">
+                <!-- Formun çok genişlemesini engellemek için max-width verdik -->
+                <div style="width: 80%; max-width: 400px;">
+
+                    <!-- Üst Başlık ve Logo -->
+                    <div class="text-center mb-5">
+                        <a href="index.html" class="text-dark text-decoration-none">
+                            <i class="fas fa-book-open fa-3x mb-3" style="color: #1a2a40;"></i>
+                            <h2 class="font-weight-bold">Satır Arası</h2>
+                        </a>
+                        <p class="text-muted">Edebiyat dünyasına tekrar hoş geldin.</p>
+                    </div>
+
+                    <!-- GİRİŞ FORMU -->
+                    <form action="index.html">
+
+                        <!-- E-Posta -->
+                        <div class="form-group mb-4">
+                            <label for="email" class="font-weight-bold small text-muted">E-POSTA ADRESİ</label>
+                            <!-- Form kutularını daha modern göstermek için bg-light ve border-0 kullandık -->
+                            <input type="email" class="form-control form-control-lg bg-light border-0" id="email"
+                                placeholder="ornek@mail.com" required>
+                        </div>
+
+                        <!-- Şifre -->
+                        <div class="form-group mb-4">
+                            <label for="password" class="font-weight-bold small text-muted">ŞİFRE</label>
+                            <div class="input-group">
+                                <input type="password" class="form-control form-control-lg bg-light border-0"
+                                    id="password" placeholder="Şifrenizi girin" required>
+                                <!-- JS ile bağlayacağımız göz ikonu butonu -->
+                                <div class="input-group-append">
+                                    <button class="btn btn-light bg-light border-0 text-secondary" type="button"
+                                        id="togglePassword">
+                                        <i class="fas fa-eye-slash" id="eyeIcon"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Beni Hatırla ve Şifremi Unuttum -->
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="rememberMe">
+                                <label class="custom-control-label text-muted small" for="rememberMe">Beni
+                                    Hatırla</label>
+                            </div>
+                            <a href="#" class="text-dark small font-weight-bold">Şifremi Unuttum</a>
+                        </div>
+
+                        <!-- Giriş Butonu -->
+                        <button type="submit" class="btn btn-dark btn-lg btn-block font-weight-bold"
+                            style="background-color: #1a2a40;">
+                            Giriş Yap
+                        </button>
+
+                    </form>
+
+                    <!-- Alt Yönlendirme -->
+                    <div class="text-center mt-5">
+                        <p class="text-muted small">
+                            Henüz bir hesabın yok mu? <a href="register.html" class="text-dark font-weight-bold">Hemen
+                                Kayıt Ol</a>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT: ŞİFRE GÖSTER / GİZLE İŞLEVİ -->
+    <!-- JAVASCRIPT: ŞİFRE GÖSTER / GİZLE İŞLEVİ -->
+    <script>
+        const togglePasswordBtn = document.getElementById('togglePassword');
+        const passwordInput = document.getElementById('password');
+        const eyeIcon = document.getElementById('eyeIcon');
+
+        togglePasswordBtn.addEventListener('click', function () {
+            const isPassword = passwordInput.getAttribute('type') === 'password';
+
+            if (isPassword) {
+                // Eğer şifre gizliyse: Metni görünür yap (text) ve ikonu 'Açık Göz'e çevir
+                passwordInput.setAttribute('type', 'text');
+                eyeIcon.classList.remove('fa-eye-slash');
+                eyeIcon.classList.add('fa-eye');
+            } else {
+                // Eğer şifre görünürse: Metni gizle (password) ve ikonu 'Çizik Göz'e çevir
+                passwordInput.setAttribute('type', 'password');
+                eyeIcon.classList.remove('fa-eye');
+                eyeIcon.classList.add('fa-eye-slash');
+            }
+        });
+    </script>
+
+</body>
+
+</html>
